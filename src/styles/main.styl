@@ -1,0 +1,412 @@
+@import mobile
+
+fontRegular = RobotoRegular
+fontMedium = RobotoMedium
+fontBold = RobotoBold
+fontBlack = RobotoBlack
+fontLight = RobotoLight
+fontThin = RobotoThin
+font-size = 1rem
+colorWhite = #ffffff
+colorDark = #4f4f52
+colorGrey = #b4b4b4
+colorLightGrey = #ededed
+colorDarkGrey = #a8a8a8
+colorPurple = #6739b6
+colorBlue = #0f95df
+colorBody = #f7f7f7
+gutters = 20px
+border-radius = 5px
+box-shadow = 0 5px 9px 0 rgba(69,69,69,0.09)
+
+@font-face
+  font-family RobotoRegular
+  src url(/assets/fonts/Roboto.woff2) format('woff2'),
+  url(/assets/fonts/Roboto.woff) format('woff')
+
+@font-face
+  font-family RobotoMedium
+  src url(/assets/fonts/Robotomedium.woff2) format('woff2'),
+  url(/assets/fonts/Robotomedium.woff) format('woff')
+
+@font-face
+  font-family RobotoBold
+  src url(/assets/fonts/Robotobold.woff2) format('woff2'),
+  url(/assets/fonts/Robotobold.woff) format('woff')
+
+@font-face
+  font-family RobotoBlack
+  src url(/assets/fonts/Robotoblack.woff2) format('woff2'),
+  url(/assets/fonts/Robotoblack.woff) format('woff')
+
+@font-face
+  font-family RobotoLight
+  src url(/assets/fonts/Robotolight.woff2) format('woff2'),
+  url(/assets/fonts/Robotolight.woff) format('woff')
+
+@font-face
+  font-family RobotoThin
+  src url(/assets/fonts/Robotothin.woff2) format('woff2'),
+  url(/assets/fonts/Robotothin.woff) format('woff')
+
+//outline fix
+input
+textarea
+  outline none
+  box-shadow none !important
+  resize none
+
+button
+a
+  display inline-block
+  &:focus
+    outline none
+    box-shadow none
+
+//bootstrap macOs fix
+.row
+  &:before
+  &:after
+    display inline-block !important
+    content normal
+
+//styles
+body
+  font-size font-size
+  font-family fontRegular
+  color colorDark
+  line-height normal
+  background-color colorBody
+
+.container
+  max-width 1436px
+  padding 0 (gutters / 2)
+
+.row
+  margin-right -(gutters / 2)
+  margin-left -(gutters / 2)
+
+[class*="col-"]
+  padding-left (gutters / 2)
+  padding-right (gutters / 2)
+
+ul
+  margin 0
+  padding 0
+
+header
+  background-color colorWhite
+  padding: 30px 0
+  margin-bottom 30px
+
+.navbar
+  padding 0
+
+.navbar-brand
+  padding 0
+  margin 0
+
+.nav-item
+  .nav-link
+    padding 0!important
+    display inline-block!important
+
+.navbar-nav
+  margin-left 10%
+  .nav-item
+    .nav-link
+      font-family fontMedium
+      font-size 1rem
+      color colorGrey
+      margin 0 14px
+    &.active
+      .nav-link
+        color colorPurple
+
+.navbar-nav
+  .nav-link
+    &:focus
+    &:hover
+      color colorPurple
+
+footer
+  background url("/assets/images/footer_bg.jpg") no-repeat center
+  background-size cover
+  padding 4rem
+  .navbar-brand
+    margin-bottom 24px
+
+.company_summary
+  font-family fontRegular
+  font-size 1rem
+  color colorLightGrey
+  margin-bottom 42px
+
+.company_findError
+  font-family fontRegular
+  font-size 1rem
+  color colorDarkGrey
+
+.company_info_title
+  font-family fontBold
+  font-size 1rem
+  color colorWhite
+  margin-bottom 26px
+  &.company_info_soc
+    margin-bottom 12px
+
+.company_info
+  .nav-item
+    .nav-link
+      font-family fontRegular
+      font-size 1rem
+      color colorLightGrey
+      margin-bottom 1rem
+    &:last-of-type
+      .nav-link
+        margin-bottom 0
+
+.icon_soc_wrapper
+  margin-bottom 18px
+
+.icon_soc
+  margin-right 10px
+
+.company_contact
+  font-family fontBold
+  font-size 0.875rem
+  color colorWhite
+  margin-bottom 10px
+  &:hover
+  &:focus
+    color colorWhite
+    text-decoration none
+
+[class*="_wrapper"]
+  border-radius border-radius
+  box-shadow box-shadow
+
+.event_summary_wrapper
+  background url("/assets/images/event_bg.jpg") no-repeat center
+  background-size cover
+  padding 2.5rem 2.25rem 3.5rem
+  color colorWhite
+  text-align center
+  margin-bottom 10px
+
+.event_summary_sponsor
+  font-family fontBlack
+  font-size 2.5rem
+  margin-bottom 14px
+
+.event_summary_title
+  font-family fontBold
+  font-size 1.8125rem
+  text-transform uppercase
+  margin-bottom 16px
+
+.event_summary_subject
+  font-family fontRegular
+  font-size 1.8125rem
+  margin-bottom 28px
+
+.event_summary_description
+  font-family fontRegular
+  font-size 1rem
+  line-height 1.5
+
+.event_themes_wrapper
+  background-color colorWhite
+  padding 4rem
+  color colorDark
+  border 2px solid colorPurple
+  margin-bottom 30px
+
+.event_themes_title
+  font-family fontBlack
+  font-size 2.25rem
+  text-transform uppercase
+  margin-bottom 3rem
+
+.event_themes_list
+  li
+    list-style-type none
+    font-family fontRegular
+    font-size 1rem
+    margin-bottom 1rem
+    max-width 360px
+
+.event_speaker_wrapper
+  background-color colorWhite
+  padding 2.5rem 2.5rem 1.875rem
+  margin-bottom 50px
+
+.event_speacer_card
+  margin-bottom 3.5rem
+
+.event_speaker_title
+  font-family fontBold
+  font-size 2.1875rem
+  color colorPurple
+  margin-bottom 38px
+
+.event_speaker_photo
+  margin-right 11px
+  box-shadow box-shadow
+  width 220px
+  height 220px
+
+.media-body
+  height 220px
+  position relative
+
+.event_speaker_rating
+  margin-bottom 20px
+
+.event_speaker_rating_number
+  font-family fontRegular
+  font-size 1.125rem
+  color colorDark
+  margin-right 10px
+
+.event_speaker_name
+  font-family fontBold
+  font-size 1.125rem
+  color colorBlue
+  margin-bottom 10px
+
+.event_speaker_company
+  font-family fontMedium
+  font-size 1.25rem
+  color colorDark
+  margin-bottom 1rem
+  font-style italic
+
+.event_speaker_status
+  font-family fontRegular
+  font-size 1rem
+  color colorDark
+
+.event_speaker_readMore
+  font-family fontMedium
+  font-size 0.875rem
+  color colorPurple
+  background-color colorWhite
+  border 1px solid colorPurple
+  padding 7px 33px
+  border-radius 14px
+  position absolute
+  bottom 0
+  &:hover
+  &:focus
+    background-color colorPurple
+    color colorWhite
+    text-decoration none
+    transition 0.4s ease
+
+.event_speaker_showAll
+  font-family fontRegular
+  font-size 1rem
+  color colorPurple
+  text-decoration underline
+  &:hover
+  &:focus
+    color colorPurple
+
+.event_activity_wrapper
+  background-color colorWhite
+  border-radius border-radius
+  box-shadow box-shadow
+  margin-bottom 30px
+
+.event_activity_image
+  width 100%
+  height 220px
+  margin-bottom 20px
+
+.event_activity_title
+  position relative
+
+.event_activity_title
+.event_activity_info
+.event_activity_soc
+  padding 20px
+
+.sticker
+  width 57px
+  height 57px
+  position absolute
+  top -50px
+
+.line
+  border-bottom 1px solid colorGrey
+
+.event_activity_name
+  font-family fontRegular
+  font-size 0.875rem
+  line-height 1.43
+  color colorPurple
+  text-transform uppercase
+  margin-bottom 10px
+
+.event_activity_shortDesc
+  font-family fontRegular
+  font-size 0.825rem
+  color colorDark
+
+.event_activity_address
+.event_activity_date
+  font-family fontLight
+  font-size 0.825rem
+  color colorDark
+
+.event_activity_address
+  margin-bottom 16px
+
+.event_activity_info
+  img
+    margin-right 8px
+
+.event_activity_price
+  font-family fontMedium
+  font-size 0.825rem
+  color colorPurple
+
+.event_activity_soc
+  font-family fontLight
+  font-size 0.75rem
+  color colorGrey
+  img
+    margin-right 5px
+
+.event_activity_views
+  margin-right 10px
+
+.nav-tabs
+  border-bottom 1px solid colorGrey
+  margin-bottom 30px
+  width 100%
+
+.nav-tabs
+  .nav-link
+    margin 0 10px
+  .nav-item
+    &:first-of-type
+      .nav-link
+        margin-left  0
+    &:last-of-type
+      .nav-link
+        margin-right 0
+
+.nav-tabs
+  .nav-link.active
+  .nav-item
+    &.show
+    .nav-link
+      color colorDark
+      background-color transparent
+      border-color transparent
+  .nav-link
+    &.active
+    &:hover
+      border-bottom 2px solid colorBlue
